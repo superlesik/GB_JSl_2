@@ -139,6 +139,7 @@ img {
 }
 
 .cart {
+    display: flex;
     position: relative;
 }
 

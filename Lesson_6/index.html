@@ -18,18 +18,20 @@
         <header>
             <div class="logo">E-shop</div>
             <div class="cart">
-                <form action="#" class="search-form" @submit.prevent="filter">
+                <search-form></search-form>
+                <cart ref="cart"></cart>
+                <!-- <form action="#" class="search-form" @submit.prevent="filter">
                     <searchform class="search-field" v-model="userSearch"></searchform>
                     <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
                 </form>
                 <button class="btn-cart" type="button" @click="isVisibleCart = !isVisibleCart">Корзина</button>
-                <cart :cart-items="cartItems" :img="imgCart" :visibility="isVisibleCart" @remove="remove"></cart>
-
+                <cart :cart-items="cartItems" :img="imgCart" :visibility="isVisibleCart" @remove="remove"></cart> -->
             </div>
         </header>
         <main>
-            <products :products="filtered" :img="imgCatalog" @add-product="addProduct"></products>
-            <error :error="error"></error>
+            <products ref="products"></products>
+            <!-- <products :products="filtered" :img="imgCatalog" @add-product="addProduct"></products>
+            <error :error="error"></error> -->
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
